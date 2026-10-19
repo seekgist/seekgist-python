@@ -1,0 +1,19 @@
+{
+  "_note": "Recorded from the local SeekGist API (mock engine) by packages/sdk-python/tests/test_live_api.py. Made-up products.",
+  "request": {
+    "op": "products_batch",
+    "idempotency_key": "sdk-live-replay-1"
+  },
+  "status": 200,
+  "headers": {
+    "idempotent-replayed": "true",
+    "content-type": "application/json"
+  },
+  "body": {
+    "upserted": 0,
+    "unchanged": 1,
+    "deleted": 0,
+    "errors": [],
+    "visible_within_s": 5.0
+  }
+}

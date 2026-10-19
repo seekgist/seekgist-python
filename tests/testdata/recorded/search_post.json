@@ -1,0 +1,93 @@
+{
+  "_note": "Recorded from the local SeekGist API (mock engine) by packages/sdk-python/tests/test_live_api.py. Made-up products.",
+  "request": {
+    "op": "search_post",
+    "body": {
+      "q": "lamp",
+      "lang": "en",
+      "per_page": 5
+    }
+  },
+  "status": 200,
+  "headers": {
+    "content-type": "application/json",
+    "ratelimit-limit": "50",
+    "ratelimit-remaining": "49",
+    "x-seekgist-usage": "searches=1, limit=150000, billed=1, period=\"2026-10\""
+  },
+  "body": {
+    "search_id": "4e6f61a8872e4d289939aa94",
+    "query": {
+      "text": "lamp",
+      "normalized": "lamp",
+      "rewritten": null,
+      "lang": "en",
+      "filters": {},
+      "sort": null,
+      "ai_used": false,
+      "ai_cached": false
+    },
+    "ids": [
+      "sdk-1",
+      "sdk-2"
+    ],
+    "hits": [
+      {
+        "id": "sdk-1",
+        "score": 1.0,
+        "product": {
+          "id": "sdk-1",
+          "name": {
+            "en": "Desk Lamp LED 12W",
+            "ar": "مصباح مكتب ليد 12 واط"
+          },
+          "url": null,
+          "image_url": null,
+          "price": "14.5",
+          "sale_price": null,
+          "currency": "JOD",
+          "in_stock": true,
+          "brand": "Lumo",
+          "category": {
+            "en": "Lighting",
+            "ar": "إضاءة"
+          }
+        },
+        "highlights": {},
+        "pinned": false
+      },
+      {
+        "id": "sdk-2",
+        "score": 1.0,
+        "product": {
+          "id": "sdk-2",
+          "name": {
+            "en": "Floor Lamp Wood",
+            "ar": "مصباح أرضي خشب"
+          },
+          "url": null,
+          "image_url": null,
+          "price": "39.0",
+          "sale_price": null,
+          "currency": "JOD",
+          "in_stock": true,
+          "brand": "Lumo",
+          "category": null
+        },
+        "highlights": {},
+        "pinned": false
+      }
+    ],
+    "total": 2,
+    "page": 1,
+    "per_page": 5,
+    "facets": [],
+    "did_you_mean": null,
+    "redirect": null,
+    "banners": [],
+    "zero_result_help": null,
+    "experiment": null,
+    "took_ms": 326.68,
+    "debug": null
+  }
+}

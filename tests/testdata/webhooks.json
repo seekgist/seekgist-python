@@ -1,0 +1,18 @@
+{
+  "_note": "Made by packages/sdk-codegen/tools/webhook_vectors.py with seekgist_providers.webhooks. Made-up test secrets.",
+  "secret": "whsec_AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8=",
+  "other_secret": "whsec_ZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXp7fH1+f4CBgoM=",
+  "timestamp": 1791900000,
+  "body": "{\"created_at\":\"2026-10-13T10:00:00+00:00\",\"data\":{\"import_id\":\"imp_1\",\"note\":\"تم الاستيراد\",\"status\":\"succeeded\"},\"id\":\"evt_0123456789abcdef0123456789abcdef\",\"tenant_id\":\"00000000-0000-4000-8000-000000000001\",\"type\":\"catalog.import_finished\"}",
+  "headers": {
+    "webhook-id": "evt_0123456789abcdef0123456789abcdef",
+    "webhook-timestamp": "1791900000",
+    "webhook-signature": "v1,ztLlFzY9fGki7Dx+0FnRi9OQpUPVLs6fmAbsgslCaD8="
+  },
+  "rotation_headers": {
+    "webhook-id": "evt_0123456789abcdef0123456789abcdef",
+    "webhook-timestamp": "1791900000",
+    "webhook-signature": "v1,0ML8RBKddYv2+N8PcKO55T+/+bhHhdFIxf89jmM+29E= v1,ztLlFzY9fGki7Dx+0FnRi9OQpUPVLs6fmAbsgslCaD8="
+  },
+  "signature": "v1,ztLlFzY9fGki7Dx+0FnRi9OQpUPVLs6fmAbsgslCaD8="
+}

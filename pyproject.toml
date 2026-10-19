@@ -1,0 +1,65 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "seekgist"
+version = "1.0.0"
+description = "SeekGist API client for Python: Arabic-first e-commerce search, suggest, catalog sync and webhooks."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "SeekGist", email = "support@seekgist.com" }]
+maintainers = [{ name = "SeekGist", email = "support@seekgist.com" }]
+keywords = ["seekgist", "search", "arabic", "ecommerce", "autocomplete", "sdk"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Framework :: AsyncIO",
+    "Typing :: Typed",
+]
+dependencies = [
+    "httpx>=0.27,<1",
+]
+
+[project.urls]
+Homepage = "https://seekgist.com/docs/sdk/python"
+Documentation = "https://seekgist.com/docs"
+Repository = "https://github.com/seekgist/seekgist-python"
+Issues = "https://github.com/seekgist/seekgist-python/issues"
+Changelog = "https://github.com/seekgist/seekgist-python/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/seekgist"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/seekgist", "README.md", "LICENSE", "CHANGELOG.md", "examples"]
+
+# Ruff: the same rules as the SeekGist API code, plus room for generated code (long docstrings
+# and operation lines). Kept here in full so the package also lints on its own.
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "ASYNC", "RUF", "SIM", "PL"]
+ignore = ["PLR0913", "PLR2004", "PLR0911", "PLR0912", "PLR0915", "PLR0917", "S101", "RUF001", "RUF002", "RUF003", "B008", "PLC0415"]
+
+[tool.ruff.lint.isort]
+# seekgist_api: the API app, used only by the live tests that run next to the API code.
+known-first-party = ["seekgist", "seekgist_api"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S", "PLR", "B017", "E501", "ASYNC"]
+"src/seekgist/_generated/**" = ["E501", "I001", "RUF022"]
+
+[tool.ruff.format]
+exclude = ["src/seekgist/_generated/**"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"

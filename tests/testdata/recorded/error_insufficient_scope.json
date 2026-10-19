@@ -1,0 +1,19 @@
+{
+  "_note": "Recorded from the local SeekGist API by packages/sdk-python/tests/test_live_api.py.",
+  "request": {
+    "op": "products_batch"
+  },
+  "status": 403,
+  "headers": {
+    "content-type": "application/problem+json"
+  },
+  "body": {
+    "type": "https://seekgist.com/docs/errors/insufficient_scope",
+    "title": "Not allowed",
+    "status": 403,
+    "code": "insufficient_scope",
+    "detail": "This credential lacks: catalog:write.",
+    "request_id": "req_262c8fb6c6d0da612fd9",
+    "docs_url": "https://seekgist.com/docs/errors/insufficient_scope"
+  }
+}

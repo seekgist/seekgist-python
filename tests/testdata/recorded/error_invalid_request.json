@@ -1,0 +1,26 @@
+{
+  "_note": "Recorded from the local SeekGist API by packages/sdk-python/tests/test_live_api.py.",
+  "request": {
+    "op": "products_batch"
+  },
+  "status": 422,
+  "headers": {
+    "content-type": "application/problem+json"
+  },
+  "body": {
+    "type": "https://seekgist.com/docs/errors/invalid_request",
+    "title": "Invalid request",
+    "status": 422,
+    "code": "invalid_request",
+    "detail": "Some fields are not valid.",
+    "request_id": "req_4ed022b7a562d34870dc",
+    "errors": [
+      {
+        "field": "upsert.0.price",
+        "code": "greater_than_equal",
+        "message": "Input should be greater than or equal to 0"
+      }
+    ],
+    "docs_url": "https://seekgist.com/docs/errors/invalid_request"
+  }
+}

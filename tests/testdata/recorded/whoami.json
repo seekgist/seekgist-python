@@ -1,0 +1,36 @@
+{
+  "_note": "Recorded from the local SeekGist API (mock engine) by packages/sdk-python/tests/test_live_api.py. Made-up products.",
+  "request": {
+    "op": "whoami"
+  },
+  "status": 200,
+  "headers": {
+    "content-type": "application/json"
+  },
+  "body": {
+    "tenant_id": "04f8c63f-bd22-4fe7-a319-8b020fc7873e",
+    "auth": "secret_key",
+    "key_id": "cb37c434-21b3-4b70-9f2f-51d6ea4a4336",
+    "user_id": null,
+    "role": null,
+    "scopes": [
+      "analytics:read",
+      "assistant",
+      "billing:read",
+      "catalog:read",
+      "catalog:write",
+      "events",
+      "experiments:read",
+      "experiments:write",
+      "merch:read",
+      "merch:write",
+      "search",
+      "settings:read",
+      "settings:write",
+      "translate:read",
+      "translate:write",
+      "webhooks:read",
+      "webhooks:write"
+    ]
+  }
+}
